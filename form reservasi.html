@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pemesanan Warung Betawi</title>
+  <link rel="stylesheet" href="style form.css">
+</head>
+<body>
+
+  <h2>Pemesanan Warung Betawi</h2>
+
+  <form id="orderForm">
+    <label for="menu">Menu</label>
+    <select id="menu" required>
+      <option value="">-- Pilih Menu --</option>
+      <option value="Soto Betawi">Soto Betawi</option>
+      <option value="Nasi Uduk">Nasi Uduk</option>
+      <option value="Kerak Telor">Kerak Telor</option>
+      <option value="Soto + Nasi">Soto + Nasi</option>
+    </select>
+
+    <label for="jumlahPesanan">Jumlah Pesanan</label>
+    <input type="number" id="jumlahPesanan" min="1" placeholder="Contoh: 2" required>
+
+    <label for="nama">Nama</label>
+    <input type="text" id="nama" required>
+
+    <label for="tanggal">Tanggal Reservasi</label>
+    <input type="date" id="tanggal" required>
+
+    <label for="jam">Waktu</label>
+    <input type="time" id="jam" required>
+
+    <label for="jumlahTamu">Jumlah Tamu</label>
+    <input type="number" id="jumlahTamu" min="1" max="20" required>
+
+    <button type="submit">Pesan Sekarang</button>
+  </form>
+
+  <!-- POPUP KONFIRMASI -->
+  <div id="popup">
+    <div id="popup-box">
+      <h3>Konfirmasi Pesanan</h3>
+      <p><strong>Menu:</strong> <span id="outMenu"></span></p>
+      <p><strong>Jumlah Pesanan:</strong> <span id="outJumlahPesanan"></span></p>
+      <p><strong>Nama:</strong> <span id="outNama"></span></p>
+      <p><strong>Tanggal:</strong> <span id="outTanggal"></span></p>
+      <p><strong>Waktu:</strong> <span id="outJam"></span></p>
+      <p><strong>Jumlah Tamu:</strong> <span id="outJumlahTamu"></span></p>
+      <button onclick="confirmOrder()">Konfirmasi</button>
+    </div>
+  </div>
+
+  <!-- POPUP TERIMA KASIH -->
+  <div id="thankyou-popup">
+    <div id="thankyou-box">
+      <h3>Terima Kasih 🙏</h3>
+      <p>Pesanan kamu berhasil dikirim</p>
+    </div>
+  </div>
+
+  <!-- CUSTOMER SERVICE -->
+  <a class="cs-floating" href="https://wa.me/6281234567890" target="_blank">
+    <img src="whatsapp (2).png" alt="CS"> Hubungi CS
+  </a>
+
+<script>
+const form = document.getElementById("orderForm");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  document.getElementById("outMenu").innerText = document.getElementById("menu").value;
+  document.getElementById("outJumlahPesanan").innerText = document.getElementById("jumlahPesanan").value;
+  document.getElementById("outNama").innerText = document.getElementById("nama").value;
+  document.getElementById("outTanggal").innerText = document.getElementById("tanggal").value;
+  document.getElementById("outJam").innerText = document.getElementById("jam").value;
+  document.getElementById("outJumlahTamu").innerText = document.getElementById("jumlahTamu").value;
+
+  document.getElementById("popup").style.display = "flex";
+});
+
+function confirmOrder() {
+  document.getElementById("popup").style.display = "none";
+  document.getElementById("thankyou-popup").style.display = "flex";
+
+  setTimeout(() => {
+    document.getElementById("thankyou-popup").style.display = "none";
+    form.reset();
+  }, 3000);
+}
+</script>
+
+</body>
+</html>

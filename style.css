@@ -1,0 +1,309 @@
+
+        /* --- RESET & GLOBAL STYLES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff; /* Background Putih Sesuai Request */
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif; /* Font klasik untuk kesan tradisional */
+            color: #2c3e50;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- NAVBAR --- */
+        .navbar {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #d35400; /* Warna Terracotta/Oranye Bata */
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #d35400;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 80vh;
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('bg\ betawi.jpg'); /* Gambar Placeholder Makanan */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content {
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn-cta {
+            background-color: #d35400;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn-cta:hover {
+            background-color: #e67e22;
+        }
+
+        /* --- TENTANG KAMI --- */
+        .about {
+            padding: 4rem 0;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .about h2 {
+            margin-bottom: 1rem;
+            font-size: 2.2rem;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: #666;
+        }
+
+        /* --- MENU FAVORIT (GRID) --- */
+        .menu {
+            padding: 4rem 0;
+            background-color: #f9f9f9; /* Sedikit abu-abu muda untuk membedakan section */
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .menu-card {
+            background: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #ddd; /* Placeholder jika gambar loading */
+        }
+
+        .menu-info {
+            padding: 1.5rem;
+        }
+
+        .menu-info h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+
+        .menu-info p {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            font-weight: 700;
+            color: #d35400;
+            font-size: 1.1rem;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: auto;
+        }
+       /* --- SLIDER TANPA BOOTSTRAP --- */
+#galeri {
+    padding: 4rem 0;
+    background-color: #ffffff;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Tombol navigasi */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+.prev:hover, .next:hover {
+    background: rgba(0,0,0,0.8);
+}
+#contact {
+    text-align: left;
+}
+
+#contact p {
+    margin: 5px 0;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .slides img {
+        height: 250px;
+    }
+}
+
+      /* =====================
+   TAMBAHAN SECTION LOKASI
+===================== */
+.lokasi {
+    padding: 4rem 0;
+}
+
+.lokasi-wrapper {
+    display: flex;
+    gap: 30px;
+}
+
+.lokasi-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.lokasi-info .btn-cta {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.lokasi-map {
+    flex: 1;
+}
+
+.lokasi-map iframe {
+    width: 100%;
+    height: 400px;
+    border: 0;
+    border-radius: 12px;
+}
+
+/* Responsive tambahan (AMAN) */
+@media (max-width: 768px) {
+    .lokasi-wrapper {
+        flex-direction: column;
+    }
+}
+
+
+
+    
+
+
+        /* --- RESPONSIVE MOBILE --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-links { display: none; } /* Sederhana: sembunyikan menu di HP untuk contoh ini */
+            .logo { font-size: 1.2rem; }
+        }
